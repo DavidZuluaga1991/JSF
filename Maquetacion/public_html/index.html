@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>KeepSmiling</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/ajax.js" type="text/javascript"></script>
+        <script src="js/autenticationusers.js" type="text/javascript"></script>
+    </head>
+    <body onload="MostrarConsulta('view/main.html');return false">
+        <div id="divmain">
+            <div id="container">
+                <div class="navzindex">
+                    <ul id="nav">
+                        <li class="current"><a href="" onclick="MostrarConsulta('view/main.html');return false">INICIO</a></li>
+                        <li><a href="">¿QUE ES KEEPSMILING?</a></li>
+                        <li><a href="">AREA ODONTOLOGOS</a></li>
+                        <li><a href="" onclick="MostrarConsulta('view/formulary.html');return false">REGISTRO</a></li>
+                        <li><a href="">CONTACTO</a></li>
+                    </ul>
+                </div>
+                <div class="img">
+                    <img src="img/logo.PNG" id="logo">
+                </div>
+                <div  id="container2" class="container2">
+                    <div id="container4" onload="validarCampos()">
+
+                    </div>
+                </div>
+                <div id="container6" class="container6">
+                    <div id="panelscontainer6">
+                        Alineación dental invisible<br>
+                        con resultados a la vista
+                    </div>
+                    <div id="panelscontainer6">
+                        <div> Acceso Pacientes</div>
+                        <div>
+                            <div id="opencontainer6">Usuario</div>
+                            <div id="opencontainer6"> <input type="text" name="user" value="" id="txtcontainer6"/> </div>
+                        </div>
+                    </div>
+                    <div id="panelscontainer6">
+                        <div> Acceso Odontólogos</div>
+                        <div id="opencontainer6">
+                            <div id="opencontainer6">Usuario</div>
+                            <div id="opencontainer6"> <input type="text" name="user" value="" id="txtcontainer6"/> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

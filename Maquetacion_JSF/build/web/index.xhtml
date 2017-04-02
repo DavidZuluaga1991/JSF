@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/style.css"></h:outputStylesheet>
+        <h:outputScript name="js/ajax.js"></h:outputScript>
+        <h:outputScript name="js/autenticationusers.js"></h:outputScript>
+    </h:head>
+    <h:body onload="MostrarConsulta('view/main.xhtml');return false">
+        <div id="divmain">
+            <div id="container">
+                <div class="navzindex">
+                    <ul id="nav">
+                        <li class="current"><a href="" onclick="MostrarConsulta('view/main.xhtml');return false">INICIO</a></li>
+                        <li><a href="">¿QUE ES KEEPSMILING?</a></li>
+                        <li><a href="">AREA ODONTOLOGOS</a></li>
+                        <li><a href="" onclick="MostrarConsulta('view/formulary.xhtml');return false">REGISTRO</a></li>
+                        <li><a href="">CONTACTO</a></li>
+                    </ul>
+                </div>
+                <div class="img">
+                    <img src="resources/img/logo.PNG" id="logo"> </img>
+                </div>
+                <div  id="container2" class="container2">
+                    <h:form>
+                        <div id="container4">  </div>
+                    </h:form>
+                </div>
+                <div id="container6" class="container6">
+                    <div id="panelscontainer6">
+                        Alineación dental invisible<br></br>
+                        con resultados a la vista
+                    </div>
+                    <div id="panelscontainer6">
+                        <div> Acceso Pacientes</div>
+                        <div>
+                            <div id="opencontainer6">Usuario</div>
+                            <div id="opencontainer6"> <input type="text" name="user" value="" id="txtcontainer6"/> </div>
+                        </div>
+                    </div>
+                    <div id="panelscontainer6">
+                        <div> Acceso Odontólogos</div>
+                        <div id="opencontainer6">
+                            <div id="opencontainer6">Usuario</div>
+                            <div id="opencontainer6"> <input type="text" name="user" value="" id="txtcontainer6"/> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

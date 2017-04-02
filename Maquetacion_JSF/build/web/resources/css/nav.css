@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/03/2017, 12:35:20 PM
+    Author     : David Zuluaga
+*/
+
+.example {
+    border-radius:2px;
+}
+#nav {
+    display:inline-block;
+    width:685px;
+    margin:0px 0px 5px 5px;
+    padding:0;
+    background:#335599 url(../img/menu.PNG) repeat-x 0;
+    border-radius:10px;
+}
+#nav li {
+    margin:10px;
+    float:left;
+    position:relative;
+    list-style:none;
+}
+#nav a {
+    font-weight:bold;
+    color:#e7e5e5;
+    text-decoration:none;
+    display:block;
+    padding:5px 17px;
+
+    border-radius:10px; /*some css3*/
+    /*-moz-border-radius:10px;
+    -webkit-border-radius:10px;*/
+    text-shadow:0 2px 2px rgba(0,0,0, .7);
+}
+
+/* selected menu element */
+#nav .current a, #nav li:hover > a {
+    /*background:#7788aa url(../images/bg.png) repeat-x 0 -20px;*/
+    color:#fff;
+    background-color: #000;
+    opacity: 0.4;
+    /*box-shadow:.5px .5px 0.5px .5px ; 
+    text-shadow:0 2px 2px rgba(255,255,255, 0.7);*/
+}
+
+/* sublevels */
+#nav ul li:hover a, #nav li:hover li a {
+    background:none;
+    border:none;
+    color:#000;
+}
+#nav ul li a:hover {
+    color:#fff;
+    border-radius:10px;
+}
+
+#nav li:hover > ul {
+    visibility:visible;
+}
+#nav ul {
+    visibility:hidden;
+    padding:0;
+    width:205px;
+    position:absolute;
+    border-radius:10px;
+}

@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19/03/2017, 11:33:53 AM
+    Author     : David Zuluaga
+*/
+#container3{
+    margin: 40px 10px 10px 5px;
+    font-family: "Arial Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#panelGBO{
+    border-radius: 10px 10px 10px 10px;
+    margin:0px 0px 0px 5px;
+    background-color: #D7D7D7;
+    width: 295px;
+    height: 270px;
+    font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.58857183;
+    color: #000;
+    float: left;
+}
+.panelG{
+    background:#DCDCDC url(../img/panel1.PNG) repeat-x 0;
+}
+.panelB{
+    background:#DCDCDC url(../img/menu.PNG) repeat-x 0;
+}
+.panelO{
+    background:#DCDCDC url(../img/panel2.PNG) repeat-x 0;
+}
+#panelGBO2{
+    font-size: 18px;
+    margin:10px 10px 5px 10px;
+    border-radius: 10px 10px 10px 10px;
+    text-align: left;
+    height: 35px;
+    background-color: #DCDCDC;
+    text-align: left;
+}
+
+#panelGBO3{
+    margin:0px 10px 20px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #ffffff;
+    height: 79%;
+    font-size: 11px;
+    text-align: left;
+}
+#img{
+    margin: 85px 15px 0px 155px;
+    float: left;
+}
+#textimg{
+    float: left;
+}
+#bodyimg{
+    position: absolute;
+}
+#container5{
+    border-radius: 10px 10px 10px 10px;
+    margin:85px 0px 0px 280px;
+    background-color: #0B173B;
+    width: 295px;
+    height: 370px;
+    font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.58857183;
+    color: #000;
+}
+#formulary{
+    position: absolute;
+    /*background-color: #335599;*/
+    margin: 15px 15px 15px 15px;
+    width: 265px;
+    height: 340px;
+}
+#formularytitle{ 
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+#imguser{
+    width: 40.2px;
+    border-radius: 10px 0px 0px 10px;
+    margin: 0px 0px 15px 8px;
+}
+
+#textboxname{
+    width: 190px;
+    height:34px;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid #ccc;
+    margin: 0px 0px 15px 0px;
+}
+.formulary{
+    float: left;
+    width: 190px;
+    height:37px;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid #ccc;
+    margin: 0px 0px 15px 0px;
+}
+.formularytxt{
+    float: left;
+    width: 190px;
+    height:35px;
+    border-radius: 0px 10px 10px 0px;
+    border: 2px solid #ccc;
+    margin: 0px 0px 15px 0px;
+}
+.register{
+    border-radius: 10px 10px 10px 10px;
+    margin: 0px 0px 15px 15px;
+    width: 235PX;
+    height: 50px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color:#58ACFA;
+}

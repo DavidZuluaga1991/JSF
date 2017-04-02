@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/03/2017, 12:34:44 PM
+    Author     : David Zuluaga
+*/
+.img{
+    position: absolute; 
+    left: 30px; 
+    top: 5px;
+    z-index: 5; 
+}
+.navzindex{
+    position: absolute;
+    left: 235px; 
+    top: 42px;
+    z-index: 4;
+}
+.container6{
+    position: absolute;
+    left: 28px; 
+    top: 750px;
+    z-index: 3;
+}
+.container2{
+    position: absolute;
+    left: 28px; 
+    top: 66px;
+    z-index: 2;
+}
