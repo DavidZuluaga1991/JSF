@@ -7,7 +7,9 @@
     </h:head>
     <h:body>
         <h:form>
-            <div id="container5" >
+            <h:inputText  id="textboxname" class="formularytxt"  onblur="validatename()" value="dasdasd"></h:inputText> 
+        </h:form>
+        <div id="container5" >
                 <div id="formulary">
                     <div id="formularytitle">
                         REGISTRO DE CLIENTES
@@ -19,6 +21,7 @@
                     <div id="formulary2">
                         <div id="imguser"><img src="resources/img/emailname.PNG" alt="" id="imguser" class="formulary"/></div>
                         <div > <input type="email" name="username" id="textboxemail" class="formularytxt" placeholder="Correo" onblur="validateemail()"/> </div>
+                        <div > <h:inputText  id="textboxemail" class="formularytxt" onblur="validateemail()"id="textboxname" class="formularytxt"  onblur="validatename()" value="#{register.nameUser}"></h:inputText> </div>
                     </div>
                     <div id="formulary2">
                         <div id="imguser"><img src="resources/img/password.PNG" alt="" id="imguser" class="formulary"/></div>
@@ -36,7 +39,6 @@
                     </div>
                 </div>
             </div>
-        </h:form>
     </h:body>
 </html>
 
