@@ -13,37 +13,44 @@ and open the template in the editor.
     </h:head>
     <h:body>
         <div id="listusers">
-            <h1>Listado de Usuarios</h1>
+            <div id="listuserstitle"> <h1>Listado de Usuarios</h1></div>
+            <div id="listuserstablet">
             <h:form>
-                <h:dataTable value="#{register.usuarios}" var="u" >
+                <h:dataTable value="#{register.usuarios}" var="u" 
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row">
+                    <div id="listuserscelds">
+                        <h:column>
+                            <f:facet name="header"><div id="listusersceldsp"> Documento </div> </f:facet>
+                            #{u.nit}
+                        </h:column>
+                    </div>
                 <h:column>
-                    <f:facet name="header">Documento</f:facet>
-                    #{u.nit}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Nombres</f:facet>
+                    <f:facet name="header"><div id="listusersceldsp"> Nombres </div> </f:facet>
                     #{u.nameUser}
                 </h:column>
                 
                 <h:column>
-                    <f:facet name="header">Correo</f:facet>
+                    <f:facet name="header"><div id="listusersceldsp"> Correo </div> </f:facet>
                     #{u.email}
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Correo</f:facet>
-                    #{u.password}
+                    <f:facet name="header"><div id="listusersceldsp"> Password </div> </f:facet>
+                    <div id="listuserscelds">#{u.password}</div>
                 </h:column>
                 <h:column>
-                    <f:facet name="header">Correo</f:facet>
+                    <f:facet name="header"><div id="listusersceldsp"> Confirmar <br></br> Password </div> </f:facet>
                     #{u.confirmpassword}
                 </h:column>
                  <h:column>
-                    <f:facet name="header">Acciones</f:facet>
+                     <f:facet name="header"><div id="listusersceldsp"> Acciones </div> </f:facet>
                     <h:commandLink value="Editar" action="#{beanUsuario.editar(u.documento)}" ></h:commandLink> ||
                     <h:commandLink value="Eliminar"></h:commandLink>
                 </h:column>
             </h:dataTable>
             </h:form>
+            </div>
         </div>
     </h:body>
 </html>
