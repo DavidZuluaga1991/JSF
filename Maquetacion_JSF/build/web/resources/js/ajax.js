@@ -10,7 +10,7 @@ function objetoAjax(){
   		}
 	}
 
-	if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
+	if (!xmlhttp && typeof XMLHttpRequest!=='undefined') {
 		xmlhttp = new XMLHttpRequest();
 	}
 	return xmlhttp;
@@ -18,13 +18,15 @@ function objetoAjax(){
 
 
 function MostrarConsulta(datos){
+        alert(datos);
 	divResultado = document.getElementById('container4');
 	ajax=objetoAjax();
-	ajax.open("GET", datos);
+        ajax.open("GET","view/formulary2.xhtml");
+	//ajax.open("GET", datos);
 	ajax.onreadystatechange=function() {
-		if (ajax.readyState==4) {
-			divResultado.innerHTML = ajax.responseText
+		if (ajax.readyState===4) {
+			divResultado.innerHTML = ajax.responseText;
 		}
-	}
-	ajax.send(null)
+	};
+	ajax.send(null);
 }

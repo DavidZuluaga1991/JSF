@@ -120,3 +120,19 @@ body {
     float: left;
     margin: 5px 5px 5px 5px;
 }
+#mensaje-error{
+    position: absolute;
+    border-color: red;
+    background-color: pink;
+    float: right;
+    border-radius: 5px 5px 5px 5px;
+}
+.mensaje-error-name{
+    margin: 60px 15px 15px 300px;
+}
+.mensaje-error-nit{
+    margin: 120px 15px 15px 300px;
+}
+.mensaje-error-email{
+    margin: 175px 15px 15px 300px;
+}

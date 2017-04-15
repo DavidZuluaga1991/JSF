@@ -1,14 +1,25 @@
 function validatename() {
+    alert("ingreso");
     var name = document.getElementById("textboxname");
+    alert("ingreso2");
     var intname = 1;
-    if (name.value === "") {
+    var sname = "";
+    if(name.value == null || name.value == "undefined"){
+        sname = "";
+    }
+    //alert(name.value+"2");
+    if (sname === "") {
         intname = 0;
     }
+    alert(intname);
+    
     if (intname === 0) {
         name.style.borderColor = "#F78181";
+        name.style.display = "inline";
     }
     if (intname === 1) {
         name.style.borderColor = "#81F79F";
+        name.style.display = "none";
     }
     return true;
 }
