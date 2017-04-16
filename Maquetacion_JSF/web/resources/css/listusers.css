@@ -8,9 +8,9 @@ and open the template in the editor.
     Author     : David Zuluaga
 */
 #listusers{
-    width: 750px;
+    width: 790px;
     border-radius: 10px 10px 10px 10px;
-    margin:85px 0px 0px 90px;
+    margin: 75px 0px 0px 60px;
     border: 1px solid;
 }
 #listuserstitle{
@@ -21,36 +21,39 @@ and open the template in the editor.
     
 }
 #listusersceldsp{
-    font-size: 17px;
     text-align: center;
 }
 
 .order-table{
+    width: 720px;
     border: 1px solid;
     color: #000;
-    margin:5px 5px 5px 35px;
+    margin:5px 5px 20px 35px;
 }
 
 .order-table-header{
 	text-align:center;
 	background:none repeat scroll 0 0 #E5E5E5;
 	border-bottom:1px solid #BBBBBB;
-	padding:16px;
+	padding:10px;
         font-weight: bold;
         color: #000;
-        margin:5px 5px 5px 5px;
+        font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 11.3px;
 }
 
 .order-table-odd-row{
 	text-align:center;
 	background:none repeat scroll 0 0 #FFFFFFF;
 	border-top:1px solid #BBBBBB;
-        margin:5px 5px 5px 5px;
+        font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 11.3px;
 }
 
 .order-table-even-row{
 	text-align:center;
 	background:none repeat scroll 0 0 #F9F9F9;
 	border-top:1px solid #BBBBBB;
-        margin:15px 15px 15px 15px;
+        font-family: "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 11.3px;
 }

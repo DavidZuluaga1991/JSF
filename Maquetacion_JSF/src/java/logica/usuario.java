@@ -13,6 +13,16 @@ public class usuario {
     
     String nameUser,email,password,confirmpassword;
     int nit;
+    boolean edit;
+
+    public boolean isEdit() {
+        return edit;
+    }
+
+    public void setEdit(boolean edit) {
+        this.edit = edit;
+    }
+    
 
     public usuario() {
     }
@@ -55,6 +65,15 @@ public class usuario {
 
     public void setNit(int nit) {
         this.nit = nit;
+    }
+
+    public void addusuario(String nameUser, String email, String password, String confirmpassword, int nit) {
+        this.nameUser = nameUser;
+        this.email = email;
+        this.password = password;
+        this.confirmpassword = confirmpassword;
+        this.nit = nit;
+        this.edit = false;
     }
     
 }

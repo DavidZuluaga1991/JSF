@@ -23,14 +23,13 @@ public class register implements Serializable {
     
  private static final String PATTERN_EMAIL = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
             + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    /**
-     * Creates a new instance of register
-     */
+ 
     String mensajeErrorEmail = "";
     String mensajeErrorNit = "";
     String mensajeErrorName = "";
     private usuario usu = new usuario();
-    private ArrayList<usuario> usuarios =  new ArrayList<usuario>();
+    private ArrayList<usuario> usuarios =  new ArrayList<>();
+    private ArrayList<usuario> tempusuarios =  new ArrayList<>();
 
     public usuario getUsu() {
         return usu;
@@ -40,6 +39,14 @@ public class register implements Serializable {
         this.usu = usu;
     }
 
+    public ArrayList<usuario> getTempusuarios() {
+        return tempusuarios;
+    }
+
+    public void setTempusuarios(ArrayList<usuario> tempusuarios) {
+        this.tempusuarios = tempusuarios;
+    }
+    
     public ArrayList<usuario> getUsuarios() {
         return usuarios;
     }
@@ -47,9 +54,6 @@ public class register implements Serializable {
     public void setUsuarios(ArrayList<usuario> usuarios) {
         this.usuarios = usuarios;
     }
- 
-
-
     public String getMensajeErrorNit() {
         return mensajeErrorNit;
     }
@@ -75,7 +79,14 @@ public class register implements Serializable {
     }
     
     public register() {
-        usu = new usuario();
+        usuario usua = new usuario();
+        usua.addusuario("David", "david.l.zuluaga@hotmail.com", "123456789Dz", "123456789Dz", 1143941345);
+        usuarios.add(usua);
+        usua = new usuario();
+        usua.addusuario("Angelica", "david.l.zuluaga@hotmail.com", "123456789Dz", "123456789Dz", 1234567891);
+        usuarios.add(usua);
+        //usu = new usuario();
+        
     }
     /**
      * Comprueba que la longitud del nombre este en el rango correcto
@@ -159,6 +170,51 @@ public class register implements Serializable {
         }
         else{
             
+        }
+    }
+
+    public void edit(int nit){
+        for (int i = 0; i < usuarios.size(); i++) {
+            if(usuarios.get(i).getNit() == nit){
+                tempusuarios.add(usuarios.get(i));
+                usuarios.get(i).setEdit(true);
+            }
+            else{
+                usuarios.get(i).setEdit(false);
+            }
+        }
+    }
+    public void eliminar(int nit){
+        int j = 0;
+        for (int i = 0; i < usuarios.size(); i++) {
+            if(usuarios.get(i).getNit() == nit){
+                j = i;
+            }
+        }
+        usuarios.remove(j);
+    }
+    public void editsave (int nit){
+        for (int i = 0; i < usuarios.size(); i++) {
+            if(usuarios.get(i).getNit() == nit){
+                if(usuarios.get(i).isEdit()){
+                    usuarios.get(i).setEdit(false);
+                }
+            }
+        }
+    }
+    public void cancelsave(int nit){
+        for (int i = 0; i < usuarios.size(); i++) {
+            if(usuarios.get(i).getNit() == nit){
+                if(usuarios.get(i).isEdit()){
+                    usuarios.get(i).setNit(tempusuarios.get(0).getNit());
+                    usuarios.get(i).setNameUser(tempusuarios.get(0).getNameUser());
+                    usuarios.get(i).setPassword(tempusuarios.get(0).getPassword());
+                    usuarios.get(i).setConfirmpassword(tempusuarios.get(0).getConfirmpassword());
+                    /*usuarios.remove(i);
+                    usuarios.add(i, tempusu);*/
+                    usuarios.get(i).setEdit(false);
+                }
+            }
         }
     }
 }
