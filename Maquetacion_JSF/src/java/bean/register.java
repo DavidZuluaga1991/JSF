@@ -206,10 +206,6 @@ public class register implements Serializable {
         for (int i = 0; i < usuarios.size(); i++) {
             if(usuarios.get(i).getNit() == nit){
                 if(usuarios.get(i).isEdit()){
-                    usuarios.get(i).setNit(tempusuarios.get(0).getNit());
-                    usuarios.get(i).setNameUser(tempusuarios.get(0).getNameUser());
-                    usuarios.get(i).setPassword(tempusuarios.get(0).getPassword());
-                    usuarios.get(i).setConfirmpassword(tempusuarios.get(0).getConfirmpassword());
                     /*usuarios.remove(i);
                     usuarios.add(i, tempusu);*/
                     usuarios.get(i).setEdit(false);
