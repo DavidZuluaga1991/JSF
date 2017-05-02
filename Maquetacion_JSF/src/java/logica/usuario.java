@@ -11,8 +11,7 @@ package logica;
  */
 public class usuario {
     
-    String nameUser,email,password,confirmpassword;
-    int nit;
+    String nameUser,email,password,confirmpassword,nit;
     boolean edit;
 
     public boolean isEdit() {
@@ -59,15 +58,15 @@ public class usuario {
         this.confirmpassword = confirmpassword;
     }
 
-    public int getNit() {
+    public String getNit() {
         return nit;
     }
 
-    public void setNit(int nit) {
+    public void setNit(String nit) {
         this.nit = nit;
     }
-
-    public void addusuario(String nameUser, String email, String password, String confirmpassword, int nit) {
+    
+    public void addusuario(String nameUser, String email, String password, String confirmpassword, String nit) {
         this.nameUser = nameUser;
         this.email = email;
         this.password = password;

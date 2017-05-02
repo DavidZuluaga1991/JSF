@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
         <title>Facelet Title</title>
         <h:outputStylesheet name="css/style.css"></h:outputStylesheet>
@@ -20,7 +21,7 @@
                     <div id="formulary2">
                         <div id="imguser"><img src="resources/img/username.PNG" alt="" id="imguser" class="formulary" ></img> </div>
                         <div> 
-                            <h:inputText id="textboxname" class="formularytxt" value="#{register.usu.nameUser}" >
+                            <h:inputText id="textboxname" value="#{register.usu.nameUser}" class="formularytxt" p:placeholder="Nombre Usuario" p:onfocus="">
                                 <f:ajax event="keyup" render="textboxname2" listener="#{register.validarName}"/>
                             </h:inputText> 
                         </div>
@@ -28,7 +29,7 @@
                     <div id="formulary2">
                         <div id="imguser"><img src="resources/img/username.PNG" alt="" id="imguser" class="formulary" ></img> </div>
                         <div> 
-                            <h:inputText id="textboxnit" class="formularytxt" value="#{register.usu.nit}" maxlength="10">
+                            <h:inputText id="textboxnit" class="formularytxt" value="#{register.usu.nit}" maxlength="10" p:placeholder="Nit Usuario">
                                 <f:ajax event="keyup" render="textboxnit2" listener="#{register.validarNit}"/>
                             </h:inputText> 
                         </div>
@@ -36,19 +37,26 @@
                     <div id="formulary2">
                         <div id="imguser"><img src="resources/img/emailname.PNG" alt="" id="imguser" class="formulary"/></div>
                         <div > 
-                            <h:inputText  id="textboxemail" class="formularytxt" onblur="validateemail()" value="#{register.usu.email}" >
+                            <h:inputText  id="textboxemail" value="#{register.usu.email}" class="formularytxt" p:placeholder="emailusuario@sudominio.com">
                                 <f:ajax event="keyup" render="textboxemail2" listener="#{register.validarEmail}"/>
                             </h:inputText> 
                         </div>
                     </div>
                     <div id="formulary2">
                         <div id="imguser"><img src="resources/img/password.PNG" alt="" id="imguser" class="formulary"/></div>
-                        <div > <h:inputText  id="textboxpassword" class="formularytxt" onblur="validatepassword()" value="#{register.usu.password}" ></h:inputText> 
+                        <div> 
+                            <h:inputSecret  id="textboxpassword" class="formularytxt" value="#{register.usu.password}" p:placeholder="Contraseña">
+                                <f:ajax event="keyup" render="textboxpass2" listener="#{register.validarPassword}"/>
+                            </h:inputSecret> 
                         </div>
                     </div>
                     <div id="formulary2">
                         <div id="imguser"><img src="resources/img/password.PNG" alt="" id="imguser" class="formulary"/></div>
-                        <div > <h:inputText id="textboxconfirmpassword" class="formularytxt" onblur="validateconfirmpassword()" value="#{register.usu.confirmpassword}" ></h:inputText> </div>
+                        <div> 
+                            <h:inputSecret id="textboxconfirmpassword" class="formularytxt" value="#{register.usu.confirmpassword}" p:placeholder="Confirmar Contraseña">
+                                <f:ajax event="keyup" render="textboxconfirmpass2" listener="#{register.validarConfirmPassword}"/>
+                            </h:inputSecret> 
+                        </div>
                     </div>
                     <div>
                         <h:commandButton value="REGISTRAR" id="register" class="register" action="#{register.guardar()}"></h:commandButton>
@@ -68,6 +76,12 @@
                 </div>
                 <div id="mensaje-error" class="mensaje-error-email">
                     <h:outputText id="textboxemail2" class="mensaje-error" value="#{register.mensajeErrorEmail}"/>
+                </div>
+                <div id="mensaje-error" class="mensaje-error-password">
+                    <h:outputText id="textboxpass2" class="mensaje-error" value="#{register.mensajeErrorPassword}"/>
+                </div>
+                <div id="mensaje-error" class="mensaje-error-confirmpassword">
+                    <h:outputText id="textboxconfirmpass2" class="mensaje-error" value="#{register.mensajeErrorConfirmPassword}"/>
                 </div>
             </div>
 

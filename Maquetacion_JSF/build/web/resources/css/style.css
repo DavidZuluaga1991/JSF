@@ -136,3 +136,9 @@ body {
 .mensaje-error-email{
     margin: 175px 15px 15px 300px;
 }
+.mensaje-error-password{
+    margin: 230px 15px 15px 300px;
+}
+.mensaje-error-confirmpassword{
+    margin: 285px 15px 15px 300px;
+}
